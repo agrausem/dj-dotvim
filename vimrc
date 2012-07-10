@@ -67,3 +67,32 @@ nmap <silent><Leader>tm <Esc>:Pytest method<CR>
 " Activation de la barre de statut de fugitive
 set laststatus=2
 set statusline=[%l,%v\ %P%M]\ %f\ %r%h%w\ (%{&ff}\ %{fugitive#statusline()}
+
+" Fonction d'affichage d'un message en inverse vidéo
+function! s:DisplayStatus(msg)
+    echohl Todo
+    echo a:msg
+    echohl None
+endfunction
+
+" Variable d'enregistrement de l'état de la gestion de la souris
+let s:mouseActivation = 1
+
+" Fonction permettant l'activation/désactivation de la gestion de la souris
+function! ToggleMouseActivation()
+    if (s:mouseActivation)
+        let s:mouseActivation = 0
+        set mouse=n
+        set paste
+        call s:DisplayStatus('Désactivation de la gestion de la souris (mode collage)')
+    else
+        let s:mouseActivation = 1
+        set mouse=a
+        set nopaste
+        call s:DisplayStatus('Activation de la gestion de la souris (mode normal)')
+    endif
+endfunction
+
+" Activation par défaut au démarrage de la gestion de la souris
+set mouse=a
+set nopaste
