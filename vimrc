@@ -66,4 +66,4 @@ nmap <silent><Leader>tm <Esc>:Pytest method<CR>
 
 " Activation de la barre de statut de fugitive
 set laststatus=2
-set statusline[%],%v\ %P%M]\ %f\ %r%h%w\ (%{&ff}\ %{fugitive#statusline()}
+set statusline=[%l,%v\ %P%M]\ %f\ %r%h%w\ (%{&ff}\ %{fugitive#statusline()}
