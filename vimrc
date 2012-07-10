@@ -96,3 +96,12 @@ endfunction
 " Activation par défaut au démarrage de la gestion de la souris
 set mouse=a
 set nopaste
+
+" Fonction de nettoyage d'un fichier :
+"   - remplacement des tabulations par des espaces
+"   - suppresion des caractères ^M en fin de ligne
+function! CleanCode()
+    %retab
+    %s/^M//g
+    call s:DisplayStatus('Code nettoyé')
+endfunction

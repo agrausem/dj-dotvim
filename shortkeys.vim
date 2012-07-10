@@ -9,3 +9,8 @@ map <C-h> <Esc>:GundoToggle<CR>
 
 " Appel de la fonction d'activation/désactivation de la souris
 map <F4> <Esc>:call ToggleMouseActivation()<CR>
+
+" Appel de la fonction de nettoyage d'un fichier (enlève les ^M parasites en
+" fin de ligne
+map <F3> <Esc>:call CleanCode()<CR>
+imap <F3> <Esc>:call CleanCode()<CR>i
