@@ -112,3 +112,7 @@ highlight LineNr ctermbg=blue ctermfg=gray
 
 " Surligne la colonne du dernier caractère autorisé par textwidth
 set cc+=1
+
+" Amélioration de la recherche avant et arrière avec surlignement du pattern
+map * <Esc>:exe '2match Search /' . expand('<cWORD>') . '/'<CR><Esc>:exe '/' . expand('<cWORD>') . '/'<CR>
+map ù <Esc>:exe '2match Search /' . expand('<cWORD>') . '/'<CR><Esc>:exe '?' . expand('<cWORD>') . '?'<CR>
