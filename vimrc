@@ -105,3 +105,10 @@ function! CleanCode()
     %s/^M//g
     call s:DisplayStatus('Code nettoyé')
 endfunction
+
+" Affichage des numéros de ligne
+set number
+highlight LineNr ctermbg=blue ctermfg=gray
+
+" Surligne la colonne du dernier caractère autorisé par textwidth
+set cc+=1
