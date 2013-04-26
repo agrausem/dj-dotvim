@@ -2,6 +2,7 @@
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+
 " Activation de l'indentation automatique
 set autoindent
 
@@ -10,6 +11,8 @@ set expandtab
 set shiftwidth=4
 set softtabstop=4
 set tabstop=8
+set scrolloff=999
+set wildmenu
 
 " Activation de la détection automatique du type de fichier
 filetype on
@@ -20,7 +23,7 @@ set textwidth=79
 
 " Activation de la coloration syntaxique
 syntax on
-colorscheme desert
+colorscheme torte
 
 " Activation de la complétion 
 " pour les fichiers python
@@ -67,7 +70,7 @@ nmap <silent><Leader>tm <Esc>:Pytest method<CR>
 
 " Activation de la barre de statut de fugitive
 set laststatus=2
-set statusline=[%l,%v\ %P%M]\ %f\ %r%h%w\ (%{&ff}\ %{fugitive#statusline()}
+" set statusline=[%l,%v\ %P%M]\ %f\ %r%h%w\ (%{&ff}\ %{fugitive#statusline()}
 
 " Fonction d'affichage d'un message en inverse vidéo
 function! s:DisplayStatus(msg)
@@ -113,7 +116,13 @@ highlight LineNr ctermbg=blue ctermfg=gray
 
 " Surligne la colonne du dernier caractère autorisé par textwidth
 set cc=+1
+highlight colorcolumn ctermbg=darkblue
 
 " Amélioration de la recherche avant et arrière avec surlignement du pattern
 map * <Esc>:exe '2match Search /' . expand('<cWORD>') . '/'<CR><Esc>:exe '/' . expand('<cWORD>') . '/'<CR>
 map ù <Esc>:exe '2match Search /' . expand('<cWORD>') . '/'<CR><Esc>:exe '?' . expand('<cWORD>') . '?'<CR>
+
+
+" Activation de powerline
+set rtp+=/home/arnaud/.vim/bundle/pwerline/powerline/bindings/vim
+
