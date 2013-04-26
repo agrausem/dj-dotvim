@@ -31,3 +31,12 @@
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule "bundle/youcompleteme"]
+	path = bundle/youcompleteme
+	url = git://github.com/Valloric/YouCompleteMe.git
+[submodule "bundle/commentary"]
+	path = bundle/commentary
+	url = git://github.com/tpope/vim-commentary
+[submodule "bundle/pwerline"]
+	path = bundle/pwerline
+	url = git://github.com/Lokaltog/powerline
