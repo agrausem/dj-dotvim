@@ -16,11 +16,15 @@ filetype on
 filetype plugin indent on
 
 " Longueur maximale des lignes
-set textwidth=79
+" Pour Python
+autocmd Filetype python set textwidth=79
+autocmd Filetype python set cc=+1
+" Pour html
+autocmd Filetype html set textwidth=
 
 " Activation de la coloration syntaxique
 syntax on
-colorscheme desert
+colorscheme elflord
 
 " Activation de la complétion 
 " pour les fichiers python

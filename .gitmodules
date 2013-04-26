@@ -34,3 +34,12 @@
 [submodule "colors/molokai"]
 	path = colors/molokai
 	url = git://github.com/tomasr/molokai.git
+[submodule "bundle/youcompleteme"]
+	path = bundle/youcompleteme
+	url = git://github.com/Valloric/YouCompleteMe.git
+[submodule "bundle/commentary"]
+	path = bundle/commentary
+	url = git://github.com/tpope/vim-commentary
+[submodule "bundle/pwerline"]
+	path = bundle/pwerline
+	url = git://github.com/Lokaltog/powerline
