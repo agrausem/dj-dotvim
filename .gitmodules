@@ -1,0 +1,9 @@
+[submodule "bundle/vim-airline"]
+	path = bundle/vim-airline
+	url = https://github.com/bling/vim-airline.git
+[submodule "bundle/fugitive"]
+	path = bundle/fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "bundle/youcompleteme"]
+	path = bundle/youcompleteme
+	url = git://github.com/Valloric/YouCompleteMe.git
