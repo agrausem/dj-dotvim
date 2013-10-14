@@ -1,12 +1,11 @@
+set encoding=utf-8
 
 let mapleader = ','
 nnoremap <Leader><Leader> :bnext<CR>
 nnoremap ;; :bprevious<CR>
 
 " Chargement de Pathogen
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
-
+call pathogen#infect()
 
 " Activation de l'indentation automatique
 set autoindent
@@ -82,7 +81,9 @@ nmap <silent><Leader>tm <Esc>:Pytest method<CR>
 
 " Activation de la barre de statut de fugitive
 set laststatus=2
-" set statusline=[%l,%v\ %P%M]\ %f\ %r%h%w\ (%{&ff}\ %{fugitive#statusline()}
+
+" pep8
+let g:pep8_map='whatever'
 
 " Fonction d'affichage d'un message en inverse vidéo
 function! s:DisplayStatus(msg)
