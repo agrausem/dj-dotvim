@@ -1,3 +1,8 @@
+
+let mapleader = ','
+nnoremap <Leader><Leader> :bnext<CR>
+nnoremap ;; :bprevious<CR>
+
 " Chargement de Pathogen
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
@@ -27,6 +32,9 @@ autocmd Filetype html set textwidth=
 
 " Activation de la coloration syntaxique
 syntax on
+set t_Co=256
+let g:airline_powerline_fonts=1
+let g:loaded_autocomplete=1
 colorscheme elflord
 
 " Activation de la complétion 
@@ -40,7 +48,7 @@ au FileType html set omnifunc=htmlcomplete#CompleteTags
 au FileType css set omnifunc=csscomplete#CompleteCSS
 
 " Définition du type de complétion de SuperTab
-let g:SuperTabDefaultCompletionType = "context"
+" let g:SuperTabDefaultCompletionType = "context"
 
 " Activation de la visualisation de la documentation
 set completeopt=menuone,longest,preview
@@ -116,7 +124,7 @@ endfunction
 
 " Affichage des numéros de ligne
 set number
-highlight LineNr ctermbg=blue ctermfg=gray
+" highlight LineNr ctermbg=blue ctermfg=gray
 
 " Surligne la colonne du dernier caractère autorisé par textwidth
 set cc=+1
@@ -125,7 +133,3 @@ highlight colorcolumn ctermbg=darkblue
 " Amélioration de la recherche avant et arrière avec surlignement du pattern
 map * <Esc>:exe '2match Search /' . expand('<cWORD>') . '/'<CR><Esc>:exe '/' . expand('<cWORD>') . '/'<CR>
 map ù <Esc>:exe '2match Search /' . expand('<cWORD>') . '/'<CR><Esc>:exe '?' . expand('<cWORD>') . '?'<CR>
-
-
-" Activation de powerline
-set rtp+=/home/arnaud/.vim/bundle/pwerline/powerline/bindings/vim

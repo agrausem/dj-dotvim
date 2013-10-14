@@ -7,3 +7,15 @@
 [submodule "bundle/youcompleteme"]
 	path = bundle/youcompleteme
 	url = git://github.com/Valloric/YouCompleteMe.git
+[submodule "bundle/commentary"]
+	path = bundle/commentary
+	url = https://github.com/tpope/vim-commentary
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = https://github.com/scrooloose/syntastic
+[submodule "bundle/pep8"]
+	path = bundle/pep8
+	url = https://github.com/vim-scripts/pep8.git
+[submodule "bundle/pyflakes"]
+	path = bundle/pyflakes
+	url = https://github.com/mitechie/pyflakes-pathogen.git
