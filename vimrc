@@ -1,10 +1,12 @@
 set encoding=utf-8
+set nocp
 
 let mapleader = ','
 nnoremap <Leader><Leader> :bnext<CR>
 nnoremap ;; :bprevious<CR>
 
 " Chargement de Pathogen
+let g:loaded_youcompleteme=1
 call pathogen#infect()
 
 " Activation de l'indentation automatique
@@ -32,8 +34,7 @@ autocmd Filetype html set textwidth=
 " Activation de la coloration syntaxique
 syntax on
 set t_Co=256
-let g:airline_powerline_fonts=1
-let g:loaded_autocomplete=1
+" let g:airline_powerline_fonts=1
 colorscheme elflord
 
 " Activation de la complétion 
@@ -134,3 +135,5 @@ highlight colorcolumn ctermbg=darkblue
 " Amélioration de la recherche avant et arrière avec surlignement du pattern
 map * <Esc>:exe '2match Search /' . expand('<cWORD>') . '/'<CR><Esc>:exe '/' . expand('<cWORD>') . '/'<CR>
 map ù <Esc>:exe '2match Search /' . expand('<cWORD>') . '/'<CR><Esc>:exe '?' . expand('<cWORD>') . '?'<CR>
+
+
